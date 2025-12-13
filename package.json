@@ -4,7 +4,11 @@
   "description": "Restaurant Management System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "npm start --preflix front-end",
+    "backend-dev": "npm run dev --preflix back-end",
+    "backend": "npm run start --preflix back-end",
+    "package-install": "concurrently \"npm install --preflix front-end\"  \"npm install --preflix back-end\" "
   },
   "repository": {
     "type": "git",
@@ -19,6 +23,10 @@
   },
   "homepage": "https://github.com/harshsharma028/Restaurant-Management-System#readme",
   "dependencies": {
-    "@angular/cli": "^21.0.3"
+    "@angular/cli": "^21.0.3",
+    "front-end": "^0.2.9"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

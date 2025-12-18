@@ -1,0 +1,32 @@
+<div class="min-h-screen flex flex-col bg-gray-50 p-8">
+
+  <!-- Header -->
+  <div class="flex justify-end">
+    <h1 class="text-4xl font-bold text-gray-800">
+      MyWebsite
+    </h1>
+  </div>
+
+  <!-- Content -->
+  <div class="flex flex-1 items-center">
+    <div class="w-1/2">
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Welcome to MyWebsite. This platform helps you manage your work,
+        connect with people, and build modern applications with ease.
+        Everything is designed to be simple, fast, and user-friendly.
+      </p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="flex gap-4">
+    <a routerLink="/signup" (click)="pageRedirection('/signup')"
+      class="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+      Sign Up
+    </a>
+    <a routerLink="/login" (click)="pageRedirection('/login')"
+      class="px-6 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 transition">
+      Login
+    </a>
+  </div>
+</div>

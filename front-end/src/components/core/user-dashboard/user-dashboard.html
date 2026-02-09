@@ -1,0 +1,26 @@
+<div class="conatiner-fluid">
+  <div class="row" style="height: 80vh;">
+    <div class="col-2">
+      @if ( authUserRole == "admin") {
+      <div class="col">
+        <button>
+          Admin
+        </button>
+      </div>
+      }
+      @if ( authUserRole == "owner") {
+      <div class="col">
+        <button>
+          Admin
+        </button>
+      </div>
+      }
+      <div class="col">
+        Show Restaurant
+      </div>
+    </div>
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

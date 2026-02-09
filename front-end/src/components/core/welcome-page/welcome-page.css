@@ -1,0 +1,58 @@
+/* Page Wrapper */
+.welcome-wrapper {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Main Title */
+.site-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.site-title span {
+  color: #2563eb;
+}
+
+/* Subtitle */
+.site-subtitle {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Description */
+.site-description {
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Buttons Section */
+.auth-buttons {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* Outline Button */
+.btn-outline-primary {
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}

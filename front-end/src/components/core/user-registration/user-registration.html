@@ -1,0 +1,72 @@
+<div class="signup-wrapper d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+
+        <div class="signup-card p-4 shadow-sm">
+
+          <!-- Header -->
+          <h2 class="text-center mb-1">Create Account</h2>
+          <p class="text-center subtitle mb-4">
+            Join us and get started
+          </p>
+
+          <!-- Form -->
+          <form [formGroup]="signupForm" (ngSubmit)="submitSignup()">
+
+            <!-- Username -->
+            <div class="mb-3">
+              <label class="form-label">User Name</label>
+              <input type="text" class="form-control" formControlName="userName" placeholder="Enter username" />
+              <small class="error" *ngIf="signupForm.get('userName')?.touched && signupForm.get('userName')?.invalid">
+                Username is required (min 3 characters)
+              </small>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="Enter email" />
+              <small class="error" *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.invalid">
+                Enter a valid email address
+              </small>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" formControlName="password" placeholder="Enter password" />
+              <small class="error" *ngIf="signupForm.get('password')?.touched && signupForm.get('password')?.invalid">
+                Password must be at least 6 characters
+              </small>
+            </div>
+
+            <!-- Role -->
+            <div class="mb-4">
+              <label class="form-label">Role</label>
+              <select class="form-select" formControlName="role">
+                <option *ngFor="let role of roles" [value]="role">
+                  {{ role }}
+                </option>
+              </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary w-100 py-2">
+              Sign Up
+            </button>
+
+          </form>
+
+          <!-- Footer -->
+          <p class="text-center mt-3 footer-text">
+            Already have an account?
+            <a routerLink="/login">Login</a>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

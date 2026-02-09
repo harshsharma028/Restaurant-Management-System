@@ -16,6 +16,9 @@ const USER_REGISTER_CONTROLLER = async (request, response) => {
     };
 
     const { name, email, password, role } = request.body;
+    console.log('request.body :>> ', request.body);
+
+    console.log('!name || !email || !password || !role :>> ', !name , !email , password , !role);
     if (!name || !email || !password || !role) {
       processLogger(MESSAGE_CODES.REQ_PARA_MIS);
       return setResponseValue(response, 400, MESSAGE_CODES.REQ_PARA_MIS);
